@@ -1,6 +1,6 @@
 <h3>Install some packages</h3>
 
-```yay -S  wl-clipboard cliphist light grim slurp rofi```
+```yay -S wl-clipboard cliphist light grim slurp rofi waybar```
 
 <h3>Rofi</h3>
 you need to move rofi folder into ~/.config
