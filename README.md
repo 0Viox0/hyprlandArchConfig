@@ -7,6 +7,14 @@ yay -S wl-clipboard cliphist light grim slurp rofi waybar
        hyprpaper
 ```
 
+<h3>Configuring fastfetch</h3>
+```sh
+cd ~/.local/share
+git clone https://github.com/LierB/fastfetch
+
+echo "fastfetch --config arch" >> ~/.zshrc
+```
+
 <h3>Network</h3>
 turn on network manager and add user to the group
 
