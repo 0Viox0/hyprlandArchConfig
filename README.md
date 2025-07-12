@@ -1,6 +1,13 @@
 <h3>Install some packages</h3>
+```yay -S wl-clipboard cliphist light grim slurp rofi waybar pavucontrol arc-gtk-theme network-manager-applet nm-connection-editor```
 
-```yay -S wl-clipboard cliphist light grim slurp rofi waybar```
+<h3>Network</h3>
+turn on network manager and add user to the group
+```sudo systemctl enable --now NetworkManager```
+```sudo usermod -aG network $USER```
+
+<h3>Set dark theme</h3>
+```gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'```
 
 <h3>Rofi</h3>
 you need to move rofi folder into ~/.config

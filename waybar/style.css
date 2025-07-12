@@ -49,11 +49,6 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
-}
-
 /* configuring workspaces */
 
 #workspaces {
@@ -62,7 +57,7 @@ button:hover {
 
 #workspaces button {
     font-size: 18px;
-    padding: 7px 13px 7px 10px;
+    padding: 7px 11px 7px 8px;
     color: #7aa2f7;
 }
 
@@ -70,7 +65,7 @@ button:hover {
     color: #ff9e64;
     font-size: 22px;
     background: rgba(255, 158, 100, 0.2);
-    padding: 7px 13px 7px 10px;
+    padding: 7px 11px 7px 8px;
     border-radius: 50%;
 }
 
@@ -89,8 +84,6 @@ button:hover {
 #disk,
 #temperature,
 #backlight,
-#network,
-#pulseaudio,
 #wireplumber,
 #custom-media,
 #tray,
@@ -128,6 +121,11 @@ button:hover {
     padding: 0px 20px;
     border-radius: 20px;
 
+    transition: all 0.3s ease-in-out;
+}
+
+#clock:hover {
+    padding: 0px 40px;
 }
 
 #battery {
@@ -199,23 +197,61 @@ label:focus {
     background-color: #90b1b1;
 }
 
+
+/* network config */
 #network {
-    background-color: #2980b9;
+    background: rgba(255, 158, 100, 0.7);
+    padding: 0px 6px 0px 8px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+    transition: all 0.1s linear;
+}
+
+#network:hover {
+    padding: 0px 12px 0px 14px;
+    font-size: 22px;
+    border-radius: 20px;
+    /* margin-left: -2px; */
+    /* margin-right: -2px; */
+    /* transform: scale(1.2); */
+    /* background-color: blue; */
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    /* background-color: #f53c3c; */
+    background-color: #595959;
 }
 
+/* audio */
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: rgba(122, 162, 247, 0.6);
+    padding: 0 20px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+#pulseaudio:hover {
+    padding: 0 30px;
 }
 
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
 }
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    /* color: #c678dd; */
+    /* background-color: rgba(198, 120, 221, 0.6); */
+    /* background-color: rgba(122, 162, 247, 0.6); */
+    /* background-color: #a37800; */
+    background: rgba(255, 158, 100, 0.4);
+}
+
 
 #wireplumber {
     background-color: #fff0f5;
