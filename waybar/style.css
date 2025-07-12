@@ -78,19 +78,16 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#battery,
 #cpu,
 #memory,
 #disk,
 #temperature,
-#backlight,
 #wireplumber,
 #custom-media,
-#tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#power-profiles-daemon,
+/* #power-profiles-daemon, */
 #mpd {
     border-radius: 10px;
     padding: 0 10px;
@@ -128,9 +125,21 @@ button:hover {
     padding: 0px 40px;
 }
 
+/* battery config */
+
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: rgba(122, 162, 247, 0.6);
+    padding: 0 18px 0 15px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    /* background-color: #ffffff; */
+    /* color: #000000; */
+}
+
+#battery:hover {
+    padding: 0 28px 0 25px;
 }
 
 #battery.charging,
@@ -139,16 +148,21 @@ button:hover {
     background-color: #26A65B;
 }
 
+#battery.warning {
+    background: rgba(255, 158, 100, 0.7);
+}
+
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: rgba(122, 162, 247, 0.6);
+        color: #fff;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    /* background-color: #f53c3c; */
+    background-color: rgba(245, 60, 60, 0.6);
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -157,44 +171,56 @@ button:hover {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
+/* #power-profiles-daemon { */
+/*     padding-right: 15px; */
+/* } */
 
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
+/* #power-profiles-daemon.performance { */
+/*     background-color: #f53c3c; */
+/*     color: #ffffff; */
+/* } */
 
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
+/* #power-profiles-daemon.balanced { */
+/*     background-color: #2980b9; */
+/*     color: #ffffff; */
+/* } */
 
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
-}
+/* #power-profiles-daemon.power-saver { */
+/*     background-color: #2ecc71; */
+/*     color: #000000; */
+/* } */
 
 label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
-}
+/* #cpu { */
+/*     background-color: #2ecc71; */
+/*     color: #000000; */
+/* } */
 
-#memory {
-    background-color: #9b59b6;
-}
+/* #memory { */
+/*     background-color: #9b59b6; */
+/* } */
+/**/
+/* #disk { */
+/*     background-color: #964B00; */
+/* } */
 
-#disk {
-    background-color: #964B00;
-}
-
+/* brightness settigns */
 #backlight {
-    background-color: #90b1b1;
+    /* background-color: #90b1b1; */
+    background-color: rgba(122, 162, 247, 0.6);
+    padding: 0 15px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+#backlight:hover {
+    padding: 0 25px;
+    background: rgba(255, 158, 100, 0.4);
 }
 
 
@@ -234,10 +260,6 @@ label:focus {
     transition: all 0.2s ease-in-out;
 }
 
-#pulseaudio:hover {
-    padding: 0 30px;
-}
-
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
@@ -245,11 +267,12 @@ label:focus {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
+    padding: 0 30px;
+    background: rgba(255, 158, 100, 0.4);
     /* color: #c678dd; */
     /* background-color: rgba(198, 120, 221, 0.6); */
     /* background-color: rgba(122, 162, 247, 0.6); */
     /* background-color: #a37800; */
-    background: rgba(255, 158, 100, 0.4);
 }
 
 
@@ -284,8 +307,15 @@ label:focus {
     background-color: #eb4d4b;
 }
 
+/* tray configuration */
 #tray {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
+    /* background-color: transparent; */
+
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 15px;
+
+    border-left: 5px solid rgba(122, 162, 247, 0.6);
 }
 
 #tray>.passive {

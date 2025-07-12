@@ -19,10 +19,10 @@
         "pulseaudio",
         "network",
         "backlight",
-        "sway/language",
         "battery",
-        "battery#bat2"
-        // "tray"
+        "tray"
+        // "battery#bat2",
+        // "sway/language",
         // "mpd",
         // "idle_inhibitor",
         // "power-profiles-daemon",
@@ -134,11 +134,14 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10,
+        "icon-size": 21,
+        "spacing": 25
         // "icons": {
         //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        //   // "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png",
+        //   // "nm-applet": "~/.config/waybar/icons/wifi.png",
+        //   // "nm-applet": "$HOME/.config/waybar/icons/wifi.png",
+        //   // "nekoray": "$HOME/.config/waybar/icons/vpn.png"
         // }
     },
     "clock": {
@@ -184,20 +187,34 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
+        "interval": 2,
         "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 50,  // Orange starts at 50%
+            "critical": 20  // Red starts at 20%
         },
         "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "format-good": "{capacity}% {icon}",  // Explicitly define for >50%
+        "tooltip": false
     },
+    // "battery": {
+    //     "states": {
+    //         // "good": 95,
+    //         "warning": 30,
+    //         "critical": 15
+    //     },
+    //     "format": "{capacity}% {icon}",
+    //     "format-full": "{capacity}% {icon}",
+    //     "format-charging": "{capacity}% ",
+    //     "format-plugged": "{capacity}% ",
+    //     "format-alt": "{time} {icon}",
+    //     // "format-good": "", // An empty format will hide the module
+    //     // "format-full": "",
+    //     "format-icons": ["", "", "", "", ""]
+    // },
     "battery#bat2": {
         "bat": "BAT2"
     },
@@ -219,9 +236,11 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} - {essid} - {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰖪",
+        "format-disconnected": " 󰖪 ",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nm-connection-editor"
+        // "on-click": "nm-applet --indicator"
+        // "on-click-right": "nm-applet"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
