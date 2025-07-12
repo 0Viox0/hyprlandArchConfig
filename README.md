@@ -1,7 +1,9 @@
 <h3>Install some packages</h3>
 
 ```sh
-yay -S wl-clipboard cliphist light grim slurp rofi waybar pavucontrol arc-gtk-theme network-manager-applet nm-connection-editor
+yay -S wl-clipboard cliphist light grim slurp rofi waybar 
+       pavucontrol arc-gtk-theme network-manager-applet 
+       nm-connection-editor dunst libnotify papirus-icon-theme
 ```
 
 <h3>Network</h3>
@@ -16,6 +18,11 @@ sudo usermod -aG network $USER
 
 ```sh
 gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+```
+
+<h3>Set up nicer notifications</h3>
+```sh
+cp -r ./dunst ~/.config/
 ```
 
 <h3>Rofi</h3>
