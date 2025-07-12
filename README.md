@@ -4,6 +4,7 @@
 yay -S wl-clipboard cliphist light grim slurp rofi waybar 
        pavucontrol arc-gtk-theme network-manager-applet 
        nm-connection-editor dunst libnotify papirus-icon-theme
+       hyprpaper
 ```
 
 <h3>Network</h3>
